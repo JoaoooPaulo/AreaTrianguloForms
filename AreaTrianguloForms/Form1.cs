@@ -16,5 +16,30 @@ namespace AreaTrianguloForms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                double baset = double.Parse(txt1.Text);
+                double alturat = double.Parse(txt2.Text);
+                double Area;
+
+                baset = double.Parse(txt1.Text);
+                alturat = double.Parse(txt2.Text);
+                Area = baset * alturat / 2;
+
+                txt3.Text = Area.ToString();
+
+            }
+            catch
+            {
+                MessageBox.Show("Dados inválidos informados!!!");
+                //limpar os txts:
+                txt3.Clear();
+                txt1.Clear();
+                txt2.Clear();
+            }        
+        }   
     }
 }
